@@ -29,7 +29,6 @@ namespace CST_150_Milestone2
             public string sku;
             public string quantity;
 
-           
         }
         public inventoryFrm()
         {
@@ -41,7 +40,7 @@ namespace CST_150_Milestone2
 
         }
 
-        private void addItemBtn_Click(object sender, EventArgs e)
+        public void addItemBtn_Click(object sender, EventArgs e)
         {
 
             //https://www.youtube.com/watch?v=PAk31IekYj4
@@ -97,6 +96,29 @@ namespace CST_150_Milestone2
             if(listView1.Items.Count > 0)
             {
                 listView1.Items.Remove(listView1.SelectedItems[0]);
+            }
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            var item = listView1.FindItemWithText(searchTxt.Text);
+
+            if (item != null)
+            {
+                MessageBox.Show(listView1.Items.IndexOf(item).ToString() + " "
+                    + searchTxt.Text + " exists");
+            }
+            else { MessageBox.Show("That item is not in the list."); }
+        }
+
+        private void restockBtn_Click(object sender, EventArgs e)
+        {
+            var restock = listView1.SelectedItems;
+            if (restock == listView1.SelectedItems)
+            {
+                MessageBox.Show(quantityTxt.Text + " " + itemNameTxt.Text + "'s reordered");
+                
+                
             }
         }
     }

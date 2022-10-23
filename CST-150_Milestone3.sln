@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CST-150_Milestone2", "CST-150_Milestone2\CST-150_Milestone2.csproj", "{7342A343-DBFB-49BE-A48A-16381E33BA3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CST-150_Milestone3", "CST-150_Milestone2\CST-150_Milestone3.csproj", "{7342A343-DBFB-49BE-A48A-16381E33BA3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -41,6 +41,10 @@
             this.quantityLbl = new System.Windows.Forms.Label();
             this.quantityTxt = new System.Windows.Forms.TextBox();
             this.removeBtn = new System.Windows.Forms.Button();
+            this.searchLbl = new System.Windows.Forms.Label();
+            this.searchTxt = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.restockBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addItemBtn
@@ -155,12 +159,52 @@
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
+            // searchLbl
+            // 
+            this.searchLbl.AutoSize = true;
+            this.searchLbl.Location = new System.Drawing.Point(228, 44);
+            this.searchLbl.Name = "searchLbl";
+            this.searchLbl.Size = new System.Drawing.Size(89, 13);
+            this.searchLbl.TabIndex = 11;
+            this.searchLbl.Text = "Search by Name:";
+            // 
+            // searchTxt
+            // 
+            this.searchTxt.Location = new System.Drawing.Point(323, 37);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(127, 20);
+            this.searchTxt.TabIndex = 12;
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Location = new System.Drawing.Point(456, 34);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(75, 23);
+            this.searchBtn.TabIndex = 13;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // restockBtn
+            // 
+            this.restockBtn.Location = new System.Drawing.Point(183, 158);
+            this.restockBtn.Name = "restockBtn";
+            this.restockBtn.Size = new System.Drawing.Size(75, 23);
+            this.restockBtn.TabIndex = 14;
+            this.restockBtn.Text = "Restock";
+            this.restockBtn.UseVisualStyleBackColor = true;
+            this.restockBtn.Click += new System.EventHandler(this.restockBtn_Click);
+            // 
             // inventoryFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CST_150_Milestone2.Properties.Resources.produce;
             this.ClientSize = new System.Drawing.Size(586, 469);
+            this.Controls.Add(this.restockBtn);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.searchTxt);
+            this.Controls.Add(this.searchLbl);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.quantityTxt);
             this.Controls.Add(this.quantityLbl);
@@ -193,6 +237,10 @@
         private System.Windows.Forms.TextBox quantityTxt;
         private System.Windows.Forms.ColumnHeader quantity;
         private System.Windows.Forms.Button removeBtn;
+        private System.Windows.Forms.Label searchLbl;
+        private System.Windows.Forms.TextBox searchTxt;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Button restockBtn;
     }
 }
 
