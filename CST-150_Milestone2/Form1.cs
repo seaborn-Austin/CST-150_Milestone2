@@ -45,20 +45,31 @@ namespace CST_150_Milestone2
 
             //https://www.youtube.com/watch?v=PAk31IekYj4
             //Learned more about listView from the above video
-            inventoryItem item = new inventoryItem();
-            item.name = itemNameTxt.Text;
-            item.sku = itemSkuTxt.Text;
-            item.quantity = quantityTxt.Text;
+            //inventoryItem item = new inventoryItem();
+            //item.name = itemNameTxt.Text;
+            //item.sku = itemSkuTxt.Text;
+            //item.quantity = quantityTxt.Text;
+            //Using class Array for Inventory Manager to create our objects
+            inventoryItem[] i = {
+                new inventoryItem(), new inventoryItem(), new inventoryItem()
+            };
+            inventoryManager newItem = new inventoryManager(i);
+            i[0].name = itemName.Text;
+            i[0].sku = itemSkuTxt.Text;
+            i[0].quantity = quantityTxt.Text;
+            i[1].name = itemName.Text;
+            i[1].sku = itemSkuTxt.Text;
+            i[1].quantity = quantityTxt.Text;
 
-            if(string.IsNullOrEmpty(itemNameTxt.Text) || string.IsNullOrEmpty(itemSkuTxt.Text) || 
+            if (string.IsNullOrEmpty(itemNameTxt.Text) || string.IsNullOrEmpty(itemSkuTxt.Text) || 
                 string.IsNullOrEmpty(quantityTxt.Text)) { return;  }
             
 
-            ListViewItem subItem = new ListViewItem(item.name);
+            ListViewItem subItem = new ListViewItem(i[0].name);
             //Add items to columns
                 listView1.Items.Add(subItem);
-                subItem.SubItems.Add(item.sku);
-                subItem.SubItems.Add(item.quantity);
+                subItem.SubItems.Add(i[0].sku);
+                subItem.SubItems.Add(i[0].quantity);
             
            
             itemNameTxt.Clear();
